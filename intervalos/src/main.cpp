@@ -7,42 +7,34 @@ using std::setprecision;
 
 int main(void){
   int x;
-  int contador1 = 0;
-  int contador2 = 0;
-  int contador3 = 0;
-  int contador4 = 0;
-  int contador5 = 0;
-  int total = 0;
+  int contador = 0;
+  int in1 = 0;
+  int in2 = 0;
+  int in3 = 0;
+  int in4 = 0;
+  int in5 = 0;
+
   double z = static_cast<double>(total);
   
   while(cin >> std::ws >> x) {
-    if(x > 99 || x < 0){
-      contador5 = contador5 + 1;
-      z+=1;
-    }
+    contador++;
     if(x >= 0 && x < 25){
-      contador1 = contador1 + 1;
-      z+=1;
-    }
-    if(x > 24 && x < 50){
-      contador2 = contador2 + 1;
-      z+=1;
-    }
-    if(x > 49 && x < 75){
-      contador3 = contador3 + 1;
-      z+=1;
-    }
-    if(x > 74 && x < 100){
-      contador4 = contador4 + 1;
-      z+=1;
-    }
+      in1++;
+    } else if(x >= 25 && x < 50){
+      in2++;
+    } else if(x >= 50 && x < 75){
+      in3++;
+    } else if(x >= 75 && x < 100){
+      in3++;
+    } else {
+      in5++;
   }
-  std::cout << setprecision(4);
-  std::cout << (contador1*100)/z << endl;
-  std::cout << (contador2*100)/z << endl;
-  std::cout << (contador3*100)/z << endl;
-  std::cout << (contador4*100)/z << endl;
-  std::cout << (contador5*100)/z << endl;
+    
+  std::cout << setprecision(4) << (in1*100)/static_cast<double>(contador) << endl;
+  std::cout << setprecision(4) << (in2*100)/contador << endl;
+  std::cout << setprecision(4) << (in3*100)/contador << endl;
+  std::cout << setprecision(4) << (in4*100)/contador << endl;
+  std::cout << setprecision(4) << (in5*100)/contador << endl;
   
   return 0;
 }
