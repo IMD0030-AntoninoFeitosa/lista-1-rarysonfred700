@@ -14,6 +14,7 @@ int main(void){
   int in4 = 0;
   int in5 = 0;
 
+  // não entendi essa parte
   double z = static_cast<double>(total);
   
   while(cin >> std::ws >> x) {
