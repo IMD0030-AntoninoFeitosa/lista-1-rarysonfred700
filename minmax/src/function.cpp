@@ -1,18 +1,15 @@
 #include "function.h"
 
 std::pair<int,int> min_max(int vetor[], std::size_t tamanho){
-  int max = 0;
-  int min = 0;
-  pair <int, int> val;
+  int max = -1;
+  int min = -1;
 
   for (int i = 0; i < tamanho; i++) {
-    if(vetor[i] >= vetor[max]){      
-      max = i;
-    } else{
-    }
-    if(vetor[i] < vetor[min]){
+    if(min == -1 || vetor[i] < vetor[min]){      
       min = i;
-    } else{
+    }
+    if(max == -1 || vetor[i] < vetor[max]){      
+      max = i;
     }
   }  
   val = std::make_pair(min, max);
